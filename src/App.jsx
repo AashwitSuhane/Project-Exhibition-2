@@ -11,6 +11,9 @@ import CreateEventPage       from './pages/CreateEventPage'
 import MyQRPage              from './pages/MyQRPage'
 import ScannerPage           from './pages/ScannerPage'
 import NotFoundPage          from './pages/NotFoundPage'
+import SignupPage from "./pages/SignupPage"
+
+
 
 export default function App() {
   return (
@@ -20,6 +23,7 @@ export default function App() {
           <Routes>
             {/* Public */}
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
 
             {/* Protected — all behind DashboardLayout */}
             <Route element={<ProtectedRoute />}>
