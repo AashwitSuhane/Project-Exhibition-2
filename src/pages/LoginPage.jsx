@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { Zap, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
   const { login, isAuth } = useAuth()
@@ -126,6 +127,12 @@ export default function LoginPage() {
                 <>Sign In <ArrowRight size={16} /></>
               )}
             </button>
+            <div className="text-center text-sm text-surface-400 mt-4">
+              Don’t have an account?{" "}
+              <Link to="/signup" className="text-neon-400 hover:underline">
+              Sign up
+              </Link>
+            </div>
           </form>
 
           {/* Divider */}
